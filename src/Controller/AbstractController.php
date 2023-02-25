@@ -7,7 +7,7 @@ use Doctrine\Persistence\ManagerRegistry;
 
 abstract class AbstractController extends SymfonyController
 {
-    protected $doctrine;
+    private $doctrine;
 
     public function __construct(ManagerRegistry $doctrine)
     {

@@ -15,7 +15,7 @@ class DashboardController extends AbstractController
     {
         $this->denyAccessUnlessGranted('IS_AUTHENTICATED_FULLY');
 
-        $users = $this->doctrine->getRepository(User::class)->findByAnyRole();
+        $users = $this->getDoctrine()->getRepository(User::class)->findByAnyRole();
 
         return $this->render('dashboard/index.html.twig', [
             'controller_name' => 'DashboardController',
